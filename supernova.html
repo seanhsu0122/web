@@ -42,20 +42,22 @@
             padding-left: 40px;
         }
         ul li {
-            background: transparent;
             margin: 8px 0;
-            padding: 0;
-            border-left: none;
-            transition: none;
         }
-        a {
-            color: #00ffc4;
-            text-decoration: none;
+        /* 連結樣式，用於「返回主頁」按鈕 */
+        .back-link a {
+            color: #00ffc4; 
+            text-decoration: none; 
             transition: color 0.3s;
+            display: inline-block;
+            padding: 10px 20px;
+            border: 1px solid #00ffc4;
+            border-radius: 5px;
         }
-        a:hover {
+        .back-link a:hover {
             color: #ffffff;
-            text-decoration: underline;
+            background-color: #00ffc420;
+            text-decoration: none;
         }
         footer {
             margin-top: 40px;
@@ -72,9 +74,10 @@
         }
         .back-link {
             display: block;
-            margin-top: 20px;
+            margin-top: 40px;
             text-align: center;
         }
+        p { text-align: justify; }
     </style>
 </head>
 <body>
@@ -87,7 +90,7 @@
 
         <h2>主要類型與結果</h2>
         <ul>
-            <li>**核心坍縮超新星 (Core-Collapse):** 發生在質量**超過太陽 8 倍**的大質量恆星。當其核心燃燒至鐵元素後，無法再進行核融合，核心便會瞬間坍縮，形成**中子星**或**黑洞**。</li>
+            <li>**核心坍縮超新星 (Core-Collapse):** 發生在質量**超過太陽 8 倍**的大質量恆星。當其核心燃燒至鐵元素後，會瞬間坍縮，形成**中子星**或**黑洞**。</li>
             <li>**Ia 型超新星 (Type Ia):** 發生在**白矮星**吸積伴星物質，質量超過極限後引發的**熱核爆炸**，通常被用作測量宇宙距離的**標準燭光**。</li>
         </ul>
         

@@ -42,20 +42,22 @@
             padding-left: 40px;
         }
         ul li {
-            background: transparent;
             margin: 8px 0;
-            padding: 0;
-            border-left: none;
-            transition: none;
         }
-        a {
-            color: #00ffc4;
-            text-decoration: none;
+        /* 連結樣式，用於「返回主頁」按鈕 */
+        .back-link a {
+            color: #00ffc4; 
+            text-decoration: none; 
             transition: color 0.3s;
+            display: inline-block;
+            padding: 10px 20px;
+            border: 1px solid #00ffc4;
+            border-radius: 5px;
         }
-        a:hover {
+        .back-link a:hover {
             color: #ffffff;
-            text-decoration: underline;
+            background-color: #00ffc420;
+            text-decoration: none;
         }
         footer {
             margin-top: 40px;
@@ -72,9 +74,10 @@
         }
         .back-link {
             display: block;
-            margin-top: 20px;
+            margin-top: 40px;
             text-align: center;
         }
+        p { text-align: justify; }
     </style>
 </head>
 <body>

@@ -8,12 +8,12 @@
         /* 1. 全域樣式：設定背景、字體和顏色 */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #0d1117; /* GitHub Dark Mode 的深藍黑色 */
+            background-color: #0d1117; /* 深藍黑色 */
             color: #ffffff; /* 白色文字 */
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            text-align: center; /* 讓所有內容居中 */
+            text-align: center;
         }
 
         /* 2. 容器樣式：限制內容寬度並居中 */
@@ -21,9 +21,10 @@
             max-width: 900px;
             margin: 50px auto;
             padding: 20px;
-            background: #161b22; /* 稍淺一點的背景色，增加層次感 */
-            border-radius: 10px; /* 圓角邊框 */
+            background: #161b22; /* 稍淺的背景色 */
+            border-radius: 10px;
             box-shadow: 0 0 20px rgba(0, 255, 255, 0.2); /* 青色發光效果 */
+            text-align: center;
         }
 
         /* 3. 標題樣式 */
@@ -31,10 +32,8 @@
             color: #00ffc4; /* 科技感青綠色 */
             font-size: 2.5em;
             margin-bottom: 0.5em;
-            /* 加入酷炫的文本陰影效果 */
             text-shadow: 0 0 10px rgba(0, 255, 196, 0.7);
-            /* 輕微的動畫效果 */
-            animation: pulse 4s infinite;
+            animation: pulse 4s infinite; /* 呼吸閃爍動畫 */
         }
 
         h2, h3 {
@@ -44,27 +43,38 @@
             margin-top: 30px;
         }
 
-        /* 4. 列表樣式 */
+        /* 4. 列表容器樣式 */
         ul {
             list-style: none; /* 移除預設的點 */
             padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* 讓按鈕在 ul 內居中 */
+        }
+        
+        /* 5. 導航按鈕樣式 (重點!) */
+        .nav-item {
+            background: #21262d; 
+            margin: 12px 0;
+            padding: 15px 30px; /* 擴大點擊區域 */
+            border-left: 3px solid #00ffc4;
+            border-radius: 5px;
+            width: 80%; /* 佔據容器寬度的比例 */
+            cursor: pointer; /* 顯示手型指標 */
+            transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+            text-align: center;
+            font-size: 1.1em;
+            font-weight: bold;
         }
 
-        ul li {
-            background: #21262d; /* 列表項目的背景色 */
-            margin: 8px 0;
-            padding: 10px;
-            border-left: 3px solid #00ffc4; /* 左側的青綠色指示條 */
-            transition: transform 0.3s, background-color 0.3s;
-        }
-
-        /* 5. 互動效果：滑鼠懸停時放大並改變顏色 */
-        ul li:hover {
+        /* 6. 互動效果：滑鼠懸停時放大並改變顏色 */
+        .nav-item:hover {
             background-color: #30363d;
-            transform: scale(1.03); /* 輕微放大 */
+            transform: scale(1.03); 
+            box-shadow: 0 0 15px rgba(0, 255, 196, 0.4); /* 懸停發光 */
         }
 
-        /* 6. 頁腳樣式 */
+        /* 7. 頁腳樣式 */
         footer {
             margin-top: 40px;
             padding-top: 20px;
@@ -73,19 +83,17 @@
             color: #8b949e;
         }
         
-        /* 7. 關鍵影格動畫：讓主標題有呼吸閃爍的效果 */
+        /* 8. 關鍵影格動畫 */
         @keyframes pulse {
             0% { opacity: 0.8; }
             50% { opacity: 1; }
             100% { opacity: 0.8; }
         }
 
-        /* 8. 調整段落樣式，使其在容器內看起來更舒適 */
         p {
-            text-align: justify; /* 讓文字左右對齊 */
+            text-align: justify; 
             padding: 0 20px;
         }
-
     </style>
 </head>
 <body>
@@ -102,19 +110,36 @@
             探索宇宙是人類與生俱來的好奇心所驅動的。
             它不僅能幫助我們了解地球在浩瀚星辰中的位置，還能推動科學和技術的進步。
             從發射火箭到觀察遙遠的星系，每一步都充滿了無限的可能。
-            注意看看，當你把滑鼠移到下方列表項目上時，會有酷炫的互動效果喔！
         </p>
 
         <h3>深入探索：點擊進入專題頁面</h3>
         <ul>
-            <li><a href="black-hole.html">⚫ 黑洞 (Black Holes)</a></li>
-            <li><a href="supernova.html">💥 超新星爆發 (Supernovae)</a></li>
-            <li><a href="nebula.html">✨ 行星狀星雲 (Planetary Nebulae)</a></li>
+            <li class="nav-item" onclick="navigateTo('black-hole.html')">
+                ⚫ 黑洞 (Black Holes)
+            </li>
+            <li class="nav-item" onclick="navigateTo('supernova.html')">
+                💥 超新星爆發 (Supernovae)
+            </li>
+            <li class="nav-item" onclick="navigateTo('nebula.html')">
+                ✨ 行星狀星雲 (Planetary Nebulae)
+            </li>
         </ul>
 
-        <hr> <footer>
-            <p>&copy; 2025 酷炫宇宙探索站 | 感謝 CSS 帶來的美化！</p>
+        <hr>
+
+        <footer>
+            <p>&copy; 2025 酷炫宇宙探索站 | 感謝 CSS 和 JavaScript 帶來的互動！</p>
         </footer>
     </div>
+
+    <script>
+        /**
+         * 導航到指定的 URL
+         * @param {string} url - 要跳轉到的目標 URL
+         */
+        function navigateTo(url) {
+            window.location.href = url;
+        }
+    </script>
 </body>
 </html>
