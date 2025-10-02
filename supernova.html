@@ -44,21 +44,43 @@
         ul li {
             margin: 8px 0;
         }
-        /* 連結樣式，用於「返回主頁」按鈕 */
+        
+        /* START: 調整為 onclick 模式的按鈕樣式 */
+        .back-link {
+            display: inline-block; 
+            margin-top: 40px;
+            text-align: center;
+            
+            /* 新增按鈕樣式 */
+            padding: 10px 30px;
+            border: 2px solid #00ffc4; 
+            border-radius: 5px;
+            cursor: pointer; /* 顯示手型 */
+            transition: all 0.3s;
+        }
+
+        /* 讓按鈕懸停時發光 */
+        .back-link:hover {
+            background-color: #00ffc41a; 
+            box-shadow: 0 0 15px rgba(0, 255, 196, 0.4);
+            transform: scale(1.05);
+        }
+        
+        /* 移除 a 標籤的預設樣式 */
         .back-link a {
             color: #00ffc4; 
             text-decoration: none; 
-            transition: color 0.3s;
-            display: inline-block;
-            padding: 10px 20px;
-            border: 1px solid #00ffc4;
-            border-radius: 5px;
+            font-weight: bold;
+            display: block; 
         }
+        
         .back-link a:hover {
-            color: #ffffff;
-            background-color: #00ffc420;
+            color: #00ffc4;
+            background-color: transparent;
             text-decoration: none;
         }
+        /* END: 調整為 onclick 模式的按鈕樣式 */
+
         footer {
             margin-top: 40px;
             padding-top: 20px;
@@ -71,11 +93,6 @@
             0% { opacity: 0.8; }
             50% { opacity: 1; }
             100% { opacity: 0.8; }
-        }
-        .back-link {
-            display: block;
-            margin-top: 40px;
-            text-align: center;
         }
         p { text-align: justify; }
     </style>
@@ -98,8 +115,8 @@
             超新星爆炸會將恆星內部合成的**重元素**（如金、銀、鈾等）拋灑到太空中，這些物質成為下一代恆星和行星系統的原料，可以說**「我們都是星塵」**。
         </p>
 
-        <div class="back-link">
-            <a href="index.html">⮜ 返回主頁</a>
+        <div class="back-link" onclick="window.location.href='index.html'">
+            <a>⮜ 返回主頁</a>
         </div>
     </div>
 </body>
