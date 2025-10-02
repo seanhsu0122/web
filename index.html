@@ -3,34 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的第一個網頁 - 宇宙探索</title>
+    <title>酷炫宇宙探索站 🚀</title>
+    <style>
+        /* 1. 全域樣式：設定背景、字體和顏色 */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0d1117; /* GitHub Dark Mode 的深藍黑色 */
+            color: #ffffff; /* 白色文字 */
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            text-align: center; /* 讓所有內容居中 */
+        }
+
+        /* 2. 容器樣式：限制內容寬度並居中 */
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #161b22; /* 稍淺一點的背景色，增加層次感 */
+            border-radius: 10px; /* 圓角邊框 */
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.2); /* 青色發光效果 */
+        }
+
+        /* 3. 標題樣式 */
+        h1 {
+            color: #00ffc4; /* 科技感青綠色 */
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+            /* 加入酷炫的文本陰影效果 */
+            text-shadow: 0 0 10px rgba(0, 255, 196, 0.7);
+            /* 輕微的動畫效果 */
+            animation: pulse 4s infinite;
+        }
+
+        h2, h3 {
+            color: #00bcd4; /* 較深的藍色 */
+            border-bottom: 2px solid #00bcd4;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+
+        /* 4. 列表樣式 */
+        ul {
+            list-style: none; /* 移除預設的點 */
+            padding: 0;
+        }
+
+        ul li {
+            background: #21262d; /* 列表項目的背景色 */
+            margin: 8px 0;
+            padding: 10px;
+            border-left: 3px solid #00ffc4; /* 左側的青綠色指示條 */
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        /* 5. 互動效果：滑鼠懸停時放大並改變顏色 */
+        ul li:hover {
+            background-color: #30363d;
+            transform: scale(1.03); /* 輕微放大 */
+        }
+
+        /* 6. 頁腳樣式 */
+        footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #30363d;
+            font-size: 0.8em;
+            color: #8b949e;
+        }
+        
+        /* 7. 關鍵影格動畫：讓主標題有呼吸閃爍的效果 */
+        @keyframes pulse {
+            0% { opacity: 0.8; }
+            50% { opacity: 1; }
+            100% { opacity: 0.8; }
+        }
+
+        /* 8. 調整段落樣式，使其在容器內看起來更舒適 */
+        p {
+            text-align: justify; /* 讓文字左右對齊 */
+            padding: 0 20px;
+        }
+
+    </style>
 </head>
 <body>
-    <h1>🚀 歡迎來到我的宇宙探索站 🌌</h1>
+    <div class="container">
+        <h1>🚀 歡迎來到我的宇宙探索站 🌌</h1>
 
-    <p>
-        你好！這個簡單的網頁是用 **HTML** 語言編寫的。
-        HTML 負責網頁的結構，就像人體的骨架。
-        你現在看到的文字、標題和圖片（如果有的話）都是由 HTML 標籤定義的。
-    </p>
+        <p>
+            你好！這個簡單的網頁是用 **HTML** 語言編寫的。
+            HTML 負責網頁的結構，就像人體的骨架。現在我們加上了 **CSS**，它就像網頁的服裝和化妝，讓它看起來更有**科技感**和**深度**。
+        </p>
 
-    <h2>我們為什麼探索宇宙？</h2>
-    <p>
-        探索宇宙是人類與生俱來的好奇心所驅動的。
-        它不僅能幫助我們了解地球在浩瀚星辰中的位置，還能推動科學和技術的進步。
-        從發射火箭到觀察遙遠的星系，每一步都充滿了無限的可能。
-    </p>
+        <h2>我們為什麼探索宇宙？</h2>
+        <p>
+            探索宇宙是人類與生俱來的好奇心所驅動的。
+            它不僅能幫助我們了解地球在浩瀚星辰中的位置，還能推動科學和技術的進步。
+            從發射火箭到觀察遙遠的星系，每一步都充滿了無限的可能。
+            注意看看，當你把滑鼠移到下方列表項目上時，會有酷炫的互動效果喔！
+        </p>
 
-    <h3>一些有趣的宇宙現象：</h3>
-    <ul>
-        <li>黑洞 (Black Holes)</li>
-        <li>超新星爆發 (Supernovae)</li>
-        <li>行星狀星雲 (Planetary Nebulae)</li>
-    </ul>
+        <h3>一些有趣的宇宙現象：</h3>
+        <ul>
+            <li>黑洞 (Black Holes)</li>
+            <li>超新星爆發 (Supernovae)</li>
+            <li>行星狀星雲 (Planetary Nebulae)</li>
+        </ul>
 
-    <hr> <footer>
-        <p>&copy; 2025 宇宙探索站 版權所有。</p>
-    </footer>
-
+        <hr> <footer>
+            <p>&copy; 2025 酷炫宇宙探索站 | 感謝 CSS 帶來的美化！</p>
+        </footer>
+    </div>
 </body>
 </html>
